@@ -12,10 +12,14 @@
   )
 )
 
+(define (reverse-digits number)
+      (if (and (> number -10) (< number 10)) number (+ (* (remainder number 10) (expt 10 (count-digits (quotient number 10)))) (reverse-digits(quotient number 10))))
+)
+
 (define (palindrome? number)
   (if (< number 0)
       (palindrome? (* number -1))
-      (if (< number 10) #t (if (= (modulo number 10) (quotient number (expt 10 (count-digits(quotient number 10))))) (palindrome? (quotient (modulo number (expt 10 (count-digits(quotient number 10))) ) 10)) #f))
+      (if (= number (reverse-digits number)) #t #f)
   )
 )
 
