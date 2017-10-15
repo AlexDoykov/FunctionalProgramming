@@ -6,7 +6,7 @@
 
 (define (count-digits number)
   (if (< number 0)
-      (* number -1)
+      (count-digits(* number -1))
       (if(< number 10) 1 (+ (count-digits(quotient number 10)) 1))
   )
 )
@@ -16,7 +16,7 @@
     "Count digits tests"
 
     (test-case "Should count correctly"
-      (check-equal? (count-digits 1024) 4)
+      (check-equal? (count-digits 2134) 4)
     )
     (test-case "Should work alright with negative numbers"
       (check-equal? (count-digits -987421245) 9)

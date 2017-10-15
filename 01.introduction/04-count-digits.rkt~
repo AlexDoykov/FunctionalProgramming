@@ -5,10 +5,7 @@
 ; Трябва да работи и за отрицателни числа.
 
 (define (count-digits number)
-  (if (< number 0)
-      (* number -1)
-      (if(< number 10) 1 (+ (count-digits(quotient number 10)) 1))
-  )
+  (void)
 )
 
 (define tests

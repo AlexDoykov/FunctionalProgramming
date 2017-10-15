@@ -5,19 +5,8 @@
 ; За по-удобно, може да разбиете задачата на по-малки такива.
 
 (define (squares-sum-bigger-two a b c)
-  (if(< a b)
-     (if(< c b)
-        (if(< c a)
-           (+ (* b b) (* a a))
-           (+ (* b b) (* c c)))
-        (+ (* b b) (* c c)))
-     (if(< c a)
-        (if(< b c)
-           (+ (* a a) (* c c))
-           (+ (* b b) (* a a)))
-        (+ (* a a) (* c c))
-        )
-))
+  (void)
+)
 
 (define tests
   (test-suite
