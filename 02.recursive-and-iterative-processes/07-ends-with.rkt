@@ -7,7 +7,7 @@
 (define (ends-with? number test)
   (cond
     ((= test 0) #t)
-    ((not (eq? (/ (modulo number 10) (modulo test 10)) 1)) #f)
+    ((not (eq? (modulo number 10) (modulo test 10))) #f)
     (else (ends-with? (quotient number 10) (quotient test 10)))
   )
 )
